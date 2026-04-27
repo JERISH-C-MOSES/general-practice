@@ -1,0 +1,26 @@
+package com.pageobjectmodel;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import com.base.BaseClass;
+import com.interfaceelements.LoginPageInterfaceElement;
+
+public class LoginPage extends BaseClass implements LoginPageInterfaceElement  {
+	
+	@FindBy (xpath = loginButton_xpath  )
+	private WebElement login;
+	
+	@FindBy (xpath = userName_xpath)
+	private WebElement username;
+	
+	@FindBy (xpath = password_xpath)
+	private WebElement password;
+	
+	@FindBy (css = submitButton_css)
+	private WebElement submitbutton;
+	
+	
+	
+
+}

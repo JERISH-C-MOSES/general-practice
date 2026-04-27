@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-04-24T09:20:16 IST" name="Suite" finished-at="2026-04-24T09:20:23 IST" duration-ms="6761">
+    <groups>
+    </groups>
+    <test started-at="2026-04-24T09:20:16 IST" name="Test" finished-at="2026-04-24T09:20:23 IST" duration-ms="6761">
+      <class name="com.testing.ParameterizedTest">
+        <test-method signature="testMethod(java.lang.String,java.lang.String)[pri:0, instance:com.testing.ParameterizedTest@1bb5a082]" started-at="2026-04-24T09:20:16 IST" name="testMethod" finished-at="2026-04-24T09:20:23 IST" duration-ms="6657" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[JERISH]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Jerish@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethod -->
+      </class> <!-- com.testing.ParameterizedTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

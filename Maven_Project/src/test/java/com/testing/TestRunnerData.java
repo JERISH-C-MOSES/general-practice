@@ -1,0 +1,25 @@
+package com.testing;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.utility.ReadExcelData;
+
+public class TestRunnerData {
+
+	public static void main(String[] args) {
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://cleartax.in/s/simple-compound-interest-calculator");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		String data = ReadExcelData.toReadData(2, 0);
+		driver.findElement(By.xpath("//*[@id=\"principleAmount\"]")).clear();
+		driver.findElement(By.xpath("//*[@id=\"principleAmount\"]")).sendKeys(data);
+
+	}
+
+}
