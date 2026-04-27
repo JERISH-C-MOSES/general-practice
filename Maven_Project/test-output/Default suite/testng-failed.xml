@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testing.Invocation_Count">
+      <class name="com.testing.ParameterizedTest">
         <methods>
           <include name="testMethod"/>
         </methods>
-      </class> <!-- com.testing.Invocation_Count -->
+      </class> <!-- com.testing.ParameterizedTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
