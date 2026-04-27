@@ -1,0 +1,10 @@
+package com.interfaceelements;
+
+public interface LoginPageInterfaceElement {
+	
+	String loginButton_xpath = "//*[@id=\"root\"]/div[4]/div[2]/div/div/div[2]/div/form/div[2]/input";                     //xpath
+	String userName_css = ".err-border[type=\"text\"]"; 							//css
+	String password_xpath =  "//input[@class=\"err-border\" and @type=\"password\"]"; //xpath
+	String submitButton_css = "button[type=\"submit\"]"; 							//css
+
+}

@@ -1,0 +1,24 @@
+package com.testing;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class Invocation_Count {
+	
+	@Test
+	private void testMethod ()
+	{
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("http://localhost:3000/");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.findElement(By.xpath("//*[@id=\"username\"]")).sendKeys("JERISH");
+		driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("Jerish@123");
+		driver.findElement(By.xpath("//*[@id=\"login-button\"]")).click();
+	}
+
+}

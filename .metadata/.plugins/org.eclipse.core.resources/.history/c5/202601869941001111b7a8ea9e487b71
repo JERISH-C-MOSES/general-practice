@@ -1,0 +1,28 @@
+package com.utility;
+
+import java.io.File;
+
+import org.apache.poi.ss.formula.functions.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ReadExcelData {
+	
+	public static void readData()
+	{
+		
+		try {
+			File file = new File("\"C:\\Users\\hello\\Downloads\\simple_interest_test_data.xlsx\"");
+			
+			Workbook book = new XSSFWorkbook(file);
+			
+			Sheet sheet = book.getSheet("Sheet1");
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	
+	
+	}
+}

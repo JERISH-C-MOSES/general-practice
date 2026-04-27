@@ -1,0 +1,45 @@
+package com.utility;
+
+import java.io.File;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ReadExcelData {
+	
+	public static void readData(int rowValue, int columValue)
+	{
+		
+		try {
+			File file = new File("C:\\Users\\hello\\Downloads\\simple_interest_test_data.xlsx");
+			
+			Workbook book = new XSSFWorkbook(file);
+			
+			Sheet sheet = book.getSheet("Sheet1");
+			
+			Row row = sheet.getRow(rowValue);
+			
+			Cell cell = row.getCell(columValue);
+			
+			//dataformatter it help to convert the data type
+			DataFormatter dataformat = new DataFormatter();
+			
+			String data = dataformat.formatCellValue(cell);
+			
+			
+			System.out.println(data);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}	
+	
+	}
+	
+	public static void main(String[] args) {
+		readData(3, 4);
+	}
+}

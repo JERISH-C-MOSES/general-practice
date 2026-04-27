@@ -1,0 +1,25 @@
+package com.pageobjectmanager;
+
+import com.pageobjectmodel.LoginPage;
+import com.utility.FileReaderManager;
+
+public class PageObjectManager {
+	
+	private FileReaderManager fileReader;
+	private static PageObjectManager pageObjectManager;
+	private LoginPage loginPage;
+	
+	//source-select getters 
+	
+	public FileReaderManager getFileReader() {
+		return fileReader;
+	}
+	public static PageObjectManager getPageObjectManager() {
+		return pageObjectManager;
+	}
+	public LoginPage getLoginPage() {
+		return loginPage;
+	}
+	
+
+}

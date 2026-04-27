@@ -1,0 +1,78 @@
+package com.utility;
+
+import java.io.File;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ReadExcelData {
+	
+	public static String toReadData(int rowValue, int columValue)
+	{
+		String data="";
+		try {
+			File file = new File("C:\\Users\\hello\\Downloads\\simple_interest_test_data.xlsx");
+			
+			Workbook book = new XSSFWorkbook(file);
+			
+			Sheet sheet = book.getSheet("Sheet1");
+			
+			Row row = sheet.getRow(rowValue);
+			
+			Cell cell = row.getCell(columValue);
+			
+			//dataformatter it help to convert the data type
+			DataFormatter dataformat = new DataFormatter();
+			
+			data = dataformat.formatCellValue(cell);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}	
+	return data;
+	}
+	
+	public static void toReadAllData()
+	{
+		String data="";
+		try {
+			File file = new File("C:\\Users\\hello\\Downloads\\simple_interest_test_data.xlsx");
+			
+			Workbook book = new XSSFWorkbook(file);
+
+			
+			Sheet sheet = book.getSheet("Sheet1");
+			
+			int lastRowNum = sheet.getLastRowNum();
+			int lastColNum = sheet.getRow(1).getLastCellNum();
+			
+			System.out.println ("last row"+lastRowNum);
+			System.out.println ("last cow"+lastColNum);
+			
+			for (int i =0;i<lastRowNum;i++)
+			{
+			Row row = sheet.getRow(i);
+			
+			for (int j = 0; j < lastColNum; j++) {
+				Cell cell = row.getCell(j);
+				DataFormatter dataformat = new DataFormatter();
+				data = dataformat.formatCellValue(cell);
+				System.out.println(data);
+			}
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}	
+	//return data;
+	}
+	
+	public static void main (String args[])
+	{
+		toReadAllData();
+	}
+}

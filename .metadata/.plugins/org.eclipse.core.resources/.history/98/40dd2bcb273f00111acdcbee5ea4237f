@@ -1,0 +1,10 @@
+package com.interfaceelements;
+
+public interface LoginPageInterfaceElement {
+	
+	String loginButton = "//a[@title=\"Jobseeker Login\"]";                     //xpath
+	String userName = ".err-border[type=\"text\"]"; 							//css
+	String password =  "//input[@class=\"err-border\" and @type=\"password\"]"; //xpath
+	String submitButton = "button[type=\"submit\"]"; 							//css
+
+}
